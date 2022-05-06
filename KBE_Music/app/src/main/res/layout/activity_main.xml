@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#606060"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_login"
+        android:layout_width="match_parent"
+        android:layout_height="96sp"
+        android:layout_marginTop="64sp"
+        android:src="@drawable/account"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_gravity="center"
+        android:textSize="72sp"
+        android:textColor="#FF9800"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:layout_marginLeft="32sp"
+        android:text="Phone Number: "
+        android:textSize="24sp"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32sp"
+        android:hint="Enter your phone number."
+        android:inputType="phone"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32sp"
+        android:text="Password: "
+        android:textSize="24sp"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32sp"
+        android:hint="Enter your password."
+        android:inputType="textPassword"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="128sp"
+        android:layout_marginTop="16sp"
+        android:background="#404040"
+        android:text="Login"
+        android:textColor="#FF9800"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_registerMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="128sp"
+        android:layout_marginTop="16sp"
+        android:background="#404040"
+        android:text="Register"
+        android:textColor="#FF9800"
+        />
+
+
+</LinearLayout>

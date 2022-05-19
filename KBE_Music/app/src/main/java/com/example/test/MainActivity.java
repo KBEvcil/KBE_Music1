@@ -2,7 +2,9 @@ package com.example.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Editable;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin,btnRegister;
 
     DatabaseHelper db;
+
 
     TextWatcher loginTextWatcher = new TextWatcher() {
         @Override
@@ -79,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     public void login() {
 

@@ -11,6 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
+        <receiver android:name=".SensorAppNoticeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.sensor.sendBroadcast"/>
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".MusicListActivity"
             android:exported="false" />

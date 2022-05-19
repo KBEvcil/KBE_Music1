@@ -2,6 +2,8 @@ package com.example.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -33,6 +35,8 @@ public class MPActivity extends AppCompatActivity {
     private MediaPlayer playingMusic = MediaPlayerSingleton.getInstance();
 
     private Handler curPosHandler;
+
+    BroadcastReceiver br = new SensorAppNoticeReceiver();
 
     Runnable durationUpdater = new Runnable() {
         @Override
@@ -85,6 +89,19 @@ public class MPActivity extends AppCompatActivity {
 
         setCurrentMusic();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter filter = new IntentFilter("com.example.sensor.sendBroadcast");
+        registerReceiver(br,filter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(br);
     }
 
     @Override
